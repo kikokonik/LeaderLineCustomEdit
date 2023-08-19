@@ -76,7 +76,7 @@ export default class LeaderLine extends LeaderLineOptions {
          */
         outlineColor:string,
     }):LeaderLineLabel;
-};
+}
 
 interface LeaderLineProps extends LeaderLineOptions {
     /**
@@ -85,127 +85,125 @@ interface LeaderLineProps extends LeaderLineOptions {
     */
     parent:HTMLElement;
     hidden:boolean;
-    dash:LeaderLineDash;
 }
 
-class LeaderLineOptions {
+declare class LeaderLineOptions {
     start:HTMLElement;
     end:HTMLElement;
     /**
      * @default "coral"
      */
-    color:String;
-    gradient:Boolean|{
-        startColor:String,
-        endColor:String,
+    color?:String;
+    gradient?:Boolean|{
+        startColor?:String,
+        endColor?:String,
     };
-    dropShadow:Boolean|{
+    dropShadow?:Boolean|{
         /**
          * @default 2
          */
-        dx:Number,
+        dx?:Number,
         /**
          * @default 4
          */
-        dy:Number,
+        dy?:Number,
         /**
          * @default 3
          */
-        blur:Number,
+        blur?:Number,
         /**
          * @default "#000"
          */
-        color:String,
+        color?:String,
         /**
          * @default 0.8
          */
-        opacity:Number,
+        opacity?:Number,
     };
     /**
      * @default "fluid"
      */
-    path:LeaderLinePath;
-    size:Number;
-    outline:Boolean;
+    path?:LeaderLinePath;
+    size?:Number;
+    outline?:Boolean;
     /**
      * @default "indianred"
      */
-    outlineColor:String;
+    outlineColor?:String;
     /**
      * @default 0.25
      */
-    outlineSize:Number;
+    outlineSize?:Number;
     /**
      * @default "behind"
      */
-    startPlug:LeaderLinePlug;
+    startPlug?:LeaderLinePlug;
     /**
      * @default "arrow1"
      */
-    endPlug:LeaderLinePlug;
-    startPlugColor:String;
-    endPlugColor:String;
+    endPlug?:LeaderLinePlug;
+    startPlugColor?:String;
+    endPlugColor?:String;
     /**
      * @default 1
      */
-    startPlugSize:Number;
+    startPlugSize?:Number;
     /**
      * @default 1
      */
-    endPlugSize:Number;
+    endPlugSize?:Number;
     /**
      * @default false
      */
-    startPlugOutline:Boolean;
+    startPlugOutline?:Boolean;
     /**
      * @default false
      */
-    endPlugOutline:Boolean;
+    endPlugOutline?:Boolean;
     /**
      * @default "auto"
      */
-    startPlugOutlineColor:String;
+    startPlugOutlineColor?:String;
     /**
      * @default "auto"
      */
-    endPlugOutlineColor:String;
+    endPlugOutlineColor?:String;
     /**
      * @default 1
      */
-    startPlugOutlineSize:Number;
+    startPlugOutlineSize?:Number;
     /**
      * @default 1
      */
-    endPlugOutlineSize:Number;
-    startLabel:String;
-    middleLabel:String;
-    endLabel:String;
-    captionLabel:String;
-    pathLabel:String;
+    endPlugOutlineSize?:Number;
+    startLabel?:String;
+    middleLabel?:String;
+    endLabel?:String;
+    captionLabel?:String;
+    pathLabel?:String;
     /**
      * Sets the effect with specified Object that can have properties as the following options.
      * Or true to enable it with all default options
      */
-    set dash(value:LeaderLineDash):void;
-    get dash():undefined;
+    dash?: boolean | LeaderLineDash;
     /**
      * @default "auto"
      */
-    startSocket:LeaderLineSocket;
+    startSocket?:LeaderLineSocket;
     /**
      * @default "auto"
      */
-    endSocket:LeaderLineSocket;
-    /**
-     * If "auto" is specified, it is adjusted to gravity suitable for current path option automatically.
-     * @default "auto"
-     */
-    startSocketGravity:LeaderLineSocketGravity;
+    endSocket?:LeaderLineSocket;
     /**
      * If "auto" is specified, it is adjusted to gravity suitable for current path option automatically.
      * @default "auto"
      */
-    endSocketGravity:LeaderLineSocketGravity;
+    startSocketGravity?:LeaderLineSocketGravity;
+    /**
+     * If "auto" is specified, it is adjusted to gravity suitable for current path option automatically.
+     * @default "auto"
+     */
+    endSocketGravity?:LeaderLineSocketGravity;
 }
 
 type EffectName="none"|"fade"|"draw";
@@ -224,16 +222,16 @@ type LeaderLineDash=Boolean|{
     length:"auto"|Number,
     gap:"auto"|Number,
     animation:Boolean|LeaderLineAnimation,
-};
+}
 
 type LeaderLineEntity={
     readonly _id:Number,
     readonly isRemoved:Boolean,
 }
-interface PointAnchor extends LeaderLineEntity {};
-interface AreaAnchor extends LeaderLineEntity {};
-interface MouseHoverAnchor extends LeaderLineEntity {};
-interface LeaderLineLabel extends LeaderLineEntity {};
+interface PointAnchor extends LeaderLineEntity {}
+interface AreaAnchor extends LeaderLineEntity {}
+interface MouseHoverAnchor extends LeaderLineEntity {}
+interface LeaderLineLabel extends LeaderLineEntity {}
 
 type LeaderLineAnchorOptions={
     "rect":{
