@@ -1,3 +1,8 @@
+## What is this project?
+This is custom fork for personal changes - Constructor parameters became required  in forked extension and not optional as in original LeaderLine project
+
+Reference to forked extension project details:
+
 ## What is this ?
 This LeaderLine version is an extension to the original LeaderLine project https://github.com/anseki/leader-line v1.0.7 .
 
