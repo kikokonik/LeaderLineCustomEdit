@@ -1,7 +1,7 @@
 {
-  "name": "leaderline",
-  "version": "1.0.10",
-  "description": "An extension to the LeaderLine project: adding parent element,scroll position, absolute parent positioning",
+  "name": "leaderlineCustomEdit",
+  "version": "1.0.20",
+  "description": "Edit of - Ahmed Ayachi - An extension to the LeaderLine project: adding parent element,scroll position, absolute parent positioning",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
@@ -16,8 +16,8 @@
   ],
   "repository":{
     "type": "git",
-    "url": "https://github.com/AhmedAyachi/LeaderLine"
+    "url": "https://github.com/kikokonik/LeaderLineCustomEdit"
   },
-  "author": "Ahmed Ayachi",
+  "author": "Kristian Konik",
   "license": "MIT"
 }
